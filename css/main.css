@@ -590,12 +590,38 @@ input {
 	   -moz-border-radius: 50%;
 	        border-radius: 50%;
 }
+.offer__slide {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	position: relative;
+}
 .offer__slide-other {
-	display: none;
+	/* display: none; */
+	width: 76.5%;
+	left: -888px;
+	background: #E3EDF5;
+	padding: 15px 38px;
+	position: absolute;
+    z-index: 1;
+	opacity: 0;
+	-webkit-transition: left 0.3s ease, opacity 0.6s ease-in-out;
+	-o-transition: left 0.3s ease, opacity 0.6s ease-in-out;
+	-moz-transition: left 0.3s ease, opacity 0.6s ease-in-out;
+	transition: left 0.3s ease, opacity 0.6s ease-in-out;
+}
+.offer__slide-other.active {
+	opacity: 1;
+	left: 273px;
 }
 .offer__slide-preview {
 	padding: 15px 15px 20px;
 	background: #fff;
+	max-width: 272px;
+	position: relative;
+    z-index: 2;
 }
 .swiper-slide-visible .offer__slide-preview {
 	-webkit-box-shadow: 0px 4px 22px rgba(20, 68, 140, 0.25);
@@ -655,5 +681,24 @@ input {
 	font-size: 16px;
 	line-height: 21px;
 	color: #395B87;
+	font-weight: 500;
+}
+.offer__col-name {
+	width: 18%;
+}
+.offer__col-bet,
+.offer__col-term {
+	width: 7.5%;
+}
+.offer__col-first {
+	width: 11.5%;
+}
+.offer__col-month {
+	width: 9.5%;
+}
+.offer__table-item:not(:last-child) {
+	margin-bottom: 31px;
+}
+.offer__table-title {
 	font-weight: 500;
 }

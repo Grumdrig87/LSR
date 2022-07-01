@@ -11,6 +11,31 @@ jQuery(document).ready(function($) {
       nextEl: '.gk-next',
       prevEl: '.gk-prev',
     },
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 5
+      },
+      // when window width is >= 480px
+      577: {
+        slidesPerView: 2,
+        spaceBetween: 10
+      },
+      // when window width is >= 640px
+      769: {
+        slidesPerView: 3,
+        spaceBetween: 10
+      },
+      994: {
+        slidesPerView: 4,
+        spaceBetween: 8
+      },
+      1200: {
+        slidesPerView: 4,
+        spaceBetween: 23
+      }
+    }
   });
   var offerSlide = new Swiper('[data-offer]', {
     slidesPerView: 4,
@@ -22,8 +47,30 @@ jQuery(document).ready(function($) {
       nextEl: '.offer__next',
       prevEl: '.offer__prev',
     },
+    breakpoints: {
+      480: {
+        slidesPerView: 2,
+        spaceBetween: 8
+      },
+      // when window width is >= 640px
+      769: {
+        slidesPerView: 3,
+        spaceBetween: 8
+      },
+      994: {
+        slidesPerView: 4,
+        spaceBetween: 8
+      },
+      1200: {
+        slidesPerView: 4,
+        spaceBetween: 23
+      }
+    }
   });
   //adaptive
+  if ($(window).width() <= 768) {
+    offerSlide.destroy();
+  }
   if ($(window).width() > 768) {
     $('.offer__more').click(function(){
       if ($(this).hasClass('less')){
@@ -41,6 +88,25 @@ jQuery(document).ready(function($) {
             nextEl: '.offer__next',
             prevEl: '.offer__prev',
           },
+    breakpoints: {
+      480: {
+        slidesPerView: 2,
+        spaceBetween: 8
+      },
+      // when window width is >= 640px
+      769: {
+        slidesPerView: 3,
+        spaceBetween: 8
+      },
+      994: {
+        slidesPerView: 4,
+        spaceBetween: 8
+      },
+      1200: {
+        slidesPerView: 4,
+        spaceBetween: 23
+      }
+    }
         });
       } else {   
         $(this).addClass('less').html('Свернуть<svg width="16" height="16"><use xlink:href="img/sprite.svg#caret-w"></use></svg>');

@@ -12,17 +12,14 @@ jQuery(document).ready(function($) {
       prevEl: '.gk-prev',
     },
     breakpoints: {
-      // when window width is >= 320px
       320: {
         slidesPerView: 1,
         spaceBetween: 5
       },
-      // when window width is >= 480px
       577: {
         slidesPerView: 2,
         spaceBetween: 10
       },
-      // when window width is >= 640px
       769: {
         slidesPerView: 3,
         spaceBetween: 10
@@ -48,11 +45,6 @@ jQuery(document).ready(function($) {
       prevEl: '.offer__prev',
     },
     breakpoints: {
-      480: {
-        slidesPerView: 2,
-        spaceBetween: 8
-      },
-      // when window width is >= 640px
       769: {
         slidesPerView: 3,
         spaceBetween: 8

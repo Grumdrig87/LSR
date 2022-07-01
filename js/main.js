@@ -8,11 +8,11 @@ jQuery(document).ready(function($) {
     spaceBetween: 23,
     initialSlide : 0,
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.gk-next',
+      prevEl: '.gk-prev',
     },
   });
-  const offerSlide = new Swiper('[data-offer]', {
+  var offerSlide = new Swiper('[data-offer]', {
     slidesPerView: 4,
     spaceBetween: 23,
     initialSlide : 0,
@@ -24,8 +24,32 @@ jQuery(document).ready(function($) {
     },
   });
   //adaptive
-  if ($(window).width() < 994) {
-    
+  if ($(window).width() > 768) {
+    $('.offer__more').click(function(){
+      if ($(this).hasClass('less')){
+        $(this).removeClass('less').html('Больше предложений<svg width="16" height="16"><use xlink:href="img/sprite.svg#caret"></use></svg>');
+        $(this).closest('.offer__slide').removeClass('active').siblings().removeClass('hidden');
+        $(this).closest('.offer__sliderwrap').find('.swiper-button').removeClass('hidden');
+        $(this).closest('.offer__slide').find('.offer__slide-other').hide(10).removeClass('show');  
+        offerSlide = new Swiper('[data-offer]', {
+          slidesPerView: 4,
+          spaceBetween: 23,
+          initialSlide : 0,
+          watchSlidesProgress: true,
+          slideVisibleClass: 'swiper-slide-visible',
+          navigation: {
+            nextEl: '.offer__next',
+            prevEl: '.offer__prev',
+          },
+        });
+      } else {   
+        $(this).addClass('less').html('Свернуть<svg width="16" height="16"><use xlink:href="img/sprite.svg#caret-w"></use></svg>');
+        offerSlide.destroy();
+        $(this).closest('.offer__slide').addClass('active').siblings().addClass('hidden');
+        $(this).closest('.offer__sliderwrap').find('.swiper-button').addClass('hidden');
+        $(this).closest('.offer__slide').find('.offer__slide-other').show(100).addClass('show');
+      }
+    })
   }
   $('[data-tab]').on('click', function() {
     $(this).addClass('active').siblings().removeClass('active');
@@ -58,7 +82,6 @@ $('[data-num]').on('change',function(){
   var obj = $(this),
       max = obj.data('max'),
       min = obj.data('min');
-
       if (obj.val() >= max)
       obj.val(max);
       else if (obj.val() <= min)

@@ -6,7 +6,10 @@
 	<meta name="keywords" content="LSR" />
     <meta name="description" content="LSR">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Fonts -->>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <!-- Favicon -->
 	<!-- OG Tags -->
 	<meta property="og:title" content="LSR" />
@@ -248,10 +251,10 @@
                             </a>
                         </div>
                     </div>
-                    <div class="swiper-button swiper-button-prev df aic jcc">
+                    <div class="swiper-button swiper-button-prev gk-prev df aic jcc">
                         <svg width="24" height="24"><use xlink:href="img/sprite.svg#left"></use></svg>
                     </div>
-                    <div class="swiper-button swiper-button-next df aic jcc">
+                    <div class="swiper-button swiper-button-next gk-next df aic jcc">
                         <svg width="24" height="24"><use xlink:href="img/sprite.svg#right"></use></svg>
                     </div>
                 </div>
@@ -264,7 +267,7 @@
                         </div>
                         <div class="calc__inputs">
                             <div class="calc__input posr">
-                                <input type="number" name="price" data-min="6000000" data-max="20000000" data-num>
+                                <input type="number" name="price" data-min="6000000" data-max="20000000" data-num class="all-input">
                                 <span class="calc__input-lab df aic">
                                     ₽
                                 </span>
@@ -285,7 +288,7 @@
                         </div>
                         <div class="calc__inputs">
                             <div class="calc__input posr">
-                                <input type="number" name="first" data-min="0" data-max="20000000" data-num data-first>
+                                <input type="number" name="first" data-min="0" data-max="20000000" data-num data-first class="all-input">
                                 <span class="calc__input-lab df aic" data-rub>
                                     ₽
                                 </span>
@@ -303,7 +306,7 @@
                         </div>
                         <div class="calc__inputs">
                             <div class="calc__input posr">
-                                <input type="number" name="price" data-min="10" data-max="30" data-num>
+                                <input type="number" name="price" data-min="10" data-max="30" data-num class="all-input">
                                 <span class="calc__input-lab df aic">
                                     лет
                                 </span>
@@ -348,7 +351,7 @@
                                         Программа для семей <br>
                                         с детьми, рожденными после 1 января 2018 года. Фиксированная ставка на весь период. Первый взнос —  от 15%. Ставка —  4,99%. Срок —  до 30 лет
                                     </p>
-                                    <a href="" class="offer__more df aic jcsb">
+                                    <a href="javascript:;" class="offer__more df aic jcsb">
                                         Больше предложений
                                         <svg width="16" height="16"><use xlink:href="img/sprite.svg#caret"></use></svg>
                                     </a>
@@ -484,7 +487,7 @@
                                         Программа для семей <br>
                                         с детьми, рожденными после 1 января 2018 года. Фиксированная ставка на весь период. Первый взнос —  от 15%. Ставка —  4,99%. Срок —  до 30 лет
                                     </p>
-                                    <a href="" class="offer__more df aic jcsb">
+                                    <a href="javascript:;" class="offer__more df aic jcsb">
                                         Больше предложений
                                         <svg width="16" height="16"><use xlink:href="img/sprite.svg#caret"></use></svg>
                                     </a>
@@ -620,7 +623,7 @@
                                         Программа для семей <br>
                                         с детьми, рожденными после 1 января 2018 года. Фиксированная ставка на весь период. Первый взнос —  от 15%. Ставка —  4,99%. Срок —  до 30 лет
                                     </p>
-                                    <a href="" class="offer__more df aic jcsb">
+                                    <a href="javascript:;" class="offer__more df aic jcsb">
                                         Больше предложений
                                         <svg width="16" height="16"><use xlink:href="img/sprite.svg#caret"></use></svg>
                                     </a>
@@ -756,7 +759,7 @@
                                         Программа для семей <br>
                                         с детьми, рожденными после 1 января 2018 года. Фиксированная ставка на весь период. Первый взнос —  от 15%. Ставка —  4,99%. Срок —  до 30 лет
                                     </p>
-                                    <a href="" class="offer__more df aic jcsb">
+                                    <a href="javascript:;" class="offer__more df aic jcsb">
                                         Больше предложений
                                         <svg width="16" height="16"><use xlink:href="img/sprite.svg#caret"></use></svg>
                                     </a>
@@ -892,7 +895,7 @@
                                         Программа для семей <br>
                                         с детьми, рожденными после 1 января 2018 года. Фиксированная ставка на весь период. Первый взнос —  от 15%. Ставка —  4,99%. Срок —  до 30 лет
                                     </p>
-                                    <a href="" class="offer__more df aic jcsb">
+                                    <a href="javascript:;" class="offer__more df aic jcsb">
                                         Больше предложений
                                         <svg width="16" height="16"><use xlink:href="img/sprite.svg#caret"></use></svg>
                                     </a>
@@ -1015,10 +1018,64 @@
                     </div>
                 </div>
             </div>
-
+        </div>
+        <div class="questions">
+            <div class="container">
+                <p class="questions__text">
+                    Заполните форму ниже  и мы ответим на любые Ваши вопросы в самое ближайшее время
+                </p>
+                <form action="post" class="questions__form">
+                    <span class="questions__input-name">
+                        Телефон
+                    </span>
+                    <div class="questions__wrap df jcsb">
+                        <div class="questions__input-wrap">
+                            <input type="tel" name="phone" class="all-input">
+                        </div>
+                        <button class="btn">
+                            Подать заявку
+                        </button>
+                    </div>
+                </form>
+                <div class="questions__ok-wrap">
+                    <div class="questions__ok df aic jcsb">
+                        Ваша заявка успешно отправлена!
+                        <svg width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M28.8906 17.4688L19.0364 26.875L14.1094 22.1719" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M21.5 37.625C30.4056 37.625 37.625 30.4056 37.625 21.5C37.625 12.5944 30.4056 5.375 21.5 5.375C12.5944 5.375 5.375 12.5944 5.375 21.5C5.375 30.4056 12.5944 37.625 21.5 37.625Z" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>                        
+                    </div>
+                </div>
+            </div>
         </div>
         <footer class="footer">
-
+            <div class="container">
+                <div class="footer__wrap df jcsb">
+                    <div class="footer__logo">
+                        <a href="#" class="logo">
+                            <img src="img/logo.png" alt="ЛСР">
+                        </a>
+                        <p>
+                            <span>©</span> Группа ЛСР, 2022
+                        </p>
+                    </div>
+                    <ul class="footer__menu">
+                        <li>
+                            <a href="#">
+                                Правовая информация
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Политика в отношении обработки  персональных данных
+                            </a>
+                        </li>
+                    </ul>
+                    <a href="tel: +74952282288" class="header__phone">
+                        +7 (495) 228-22-88
+                    </a>
+                </div>
+            </div>
         </footer>
     </div>
     <object class="hidden" type="image/svg+xml" data="img/sprite.svg" >Your browser does not support SVG</object>

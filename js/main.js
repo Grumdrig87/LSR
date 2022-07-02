@@ -62,6 +62,17 @@ jQuery(document).ready(function($) {
   //adaptive
   if ($(window).width() <= 768) {
     offerSlide.destroy();
+    $('.offer__more').click(function(){
+      if ($(this).hasClass('less')){
+        $(this).removeClass('less').html('Больше предложений<svg width="16" height="16"><use xlink:href="img/sprite.svg#caret"></use></svg>');
+        $(this).closest('.offer__slide').removeClass('active');
+        $(this).closest('.offer__slide').find('.offer__slide-other').slideToggle(300);
+      } else {   
+          $(this).addClass('less').html('Свернуть<svg width="16" height="16"><use xlink:href="img/sprite.svg#caret-w"></use></svg>');
+          $(this).closest('.offer__slide').addClass('active');
+          $(this).closest('.offer__slide').find('.offer__slide-other').slideToggle(300);
+        }
+    })
   }
   if ($(window).width() > 768) {
     $('.offer__more').click(function(){

@@ -746,7 +746,9 @@ input {
 .offer__next {
 	right: -30px;
 }
-
+.offer__col-mob {
+	display: none;
+}
 /* ---------questions-------- */
 
 .questions {

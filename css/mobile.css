@@ -183,6 +183,51 @@
 .footer__logo {
   margin-bottom: 29px;
 }
+.offer__col-mob {
+	display: block;
+  font-weight: 500;
+}
+.offer__slide {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.offer__slide-other {
+  width: 100%;
+  position: relative;
+  left: 0;
+  opacity: 1;
+  display: none;
+  pointer-events: all;
+}
+.offer__table-title {
+  display: none;
+}
+.offer__slide.active .offer__slide-preview {
+  max-width: unset;
+}
+.offer__more.less svg {
+  -webkit-transform: rotateZ(270deg);
+     -moz-transform: rotateZ(270deg);
+      -ms-transform: rotate(270deg);
+       -o-transform: rotateZ(270deg);
+          transform: rotateZ(270deg);
+}
+.offer__table-item {
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+.offer__col {
+  width: 50%;
+}
+.offer__col-name {
+  width: 100%;
+}
 }
 
 

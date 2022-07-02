@@ -53,7 +53,7 @@ jQuery(document).ready(function($) {
         slidesPerView: 4,
         spaceBetween: 8
       },
-      1200: {
+      1201: {
         slidesPerView: 4,
         spaceBetween: 23
       }
@@ -96,7 +96,6 @@ jQuery(document).ready(function($) {
         slidesPerView: 2,
         spaceBetween: 8
       },
-      // when window width is >= 640px
       769: {
         slidesPerView: 3,
         spaceBetween: 8
@@ -105,7 +104,7 @@ jQuery(document).ready(function($) {
         slidesPerView: 4,
         spaceBetween: 8
       },
-      1200: {
+      1201: {
         slidesPerView: 4,
         spaceBetween: 23
       }

@@ -628,7 +628,7 @@ input {
 	top: 0;
 	bottom: 0;
 	background: #E3EDF5;
-	padding: 15px 38px;
+	padding: 15px 26px 15px 38px;
 	position: absolute;
     z-index: 1;
 	opacity: 0;
@@ -637,9 +637,46 @@ input {
 	-moz-transition: left 0.3s ease, opacity 0.6s ease-in-out;
 	transition: left 0.3s ease, opacity 0.6s ease-in-out;
 }
+.offer__slide-table {
+    max-height: 100%;
+    overflow-y: scroll;
+	padding-right: 5px;
+}
+.offer__slide-table::-webkit-scrollbar-button {
+	background-image:url('');
+	background-repeat:no-repeat;
+	width:4px;
+	height:7px
+}
+
+.offer__slide-table::-webkit-scrollbar-track {
+	background-color: rgb(227, 237, 245)
+}
+
+.offer__slide-table::-webkit-scrollbar-thumb {
+	-webkit-border-radius: 0px;
+	border-radius: 0px;
+	background-color:rgb(206, 217, 226);
+}
+
+.offer__slide-table::-webkit-scrollbar-thumb:hover{
+	background-color:#56999f;
+}
+
+.offer__slide-table::-webkit-resizer{
+	background-image:url('');
+	background-repeat:no-repeat;
+	width:4px;
+	height:0px
+}
+
+.offer__slide-table::-webkit-scrollbar{
+	width: 4px;
+}
 .offer__slide-other.show {
 	opacity: 1;
 	left: 273px;
+	pointer-events: visible;
 }
 .offer__slide-preview {
 	padding: 16px 15px 20px;

@@ -326,11 +326,31 @@ input {
 .calc__slide {
 	display: block;
 	color: #395B87;
+	height: unset;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	background: #fff;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	   -moz-box-orient: vertical;
+	   -moz-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	   -moz-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
 }
 .calc__slide:hover,
 .calc__slide.active {
 	text-decoration: none;
 	color: #fff;
+	background: rgb(57, 91, 135);
 }
 .gk__img {
 	display: block;
@@ -348,7 +368,6 @@ input {
 	background: #fff;
 	display: block;
 	padding: 10px 10px 10px 19px;
-	border-bottom: 1px solid #EEEEEE;
 	-webkit-transition: all 0.3s ease;
 	-o-transition: all 0.3s ease;
 	-moz-transition: all 0.3s ease;
@@ -356,7 +375,6 @@ input {
 }
 .calc__slide:hover .gk__info,
 .calc__slide.active .gk__info {
-	border-bottom: 1px solid rgba(255, 255, 255, 0.16);
 	background: #395B87;
 }
 .gk__name {
@@ -425,6 +443,7 @@ input {
 .gk__flats {
 	padding: 10px 10px 11px 19px;
 	background: #fff;
+	border-top: 1px solid #EEEEEE;
 	-webkit-transition: all 0.3s ease;
 	-o-transition: all 0.3s ease;
 	-moz-transition: all 0.3s ease;
@@ -436,6 +455,7 @@ input {
 .calc__slide:hover .gk__flats,
 .calc__slide.active .gk__flats {
 	background: #395B87;
+	border-top: 1px solid rgba(255, 255, 255, 0.16);
 }
 .gk__bottomlabel {
 	display: block;
